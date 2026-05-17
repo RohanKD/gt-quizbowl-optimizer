@@ -176,8 +176,12 @@ PLAYER_DATA = {
          "cats": {"lit": 5.45, "hist": 9.09, "sci": 3.64, "arts": -0.45, "beliefs": 6.82, "thought": 4.55, "other": 1.36}},
         {"tournament": "HISTONE", "difficulty": 1.5, "ppg": 16.67,
          "cats": {"lit": 1.0, "hist": 4.0, "sci": 0.0, "arts": 0.5, "beliefs": 7.0, "thought": 2.5, "other": 1.5}},
+        {"tournament": "Planetfall III", "difficulty": 1.5, "ppg": 35.0,
+         "cats": {"lit": 3.0, "hist": 8.0, "sci": 2.0, "arts": 3.0, "beliefs": 10.0, "thought": 5.0, "other": 4.0}},
         {"tournament": "DART IV", "difficulty": 1.5, "ppg": 41.11,
          "cats": {"lit": 3.0, "hist": 12.0, "sci": 2.0, "arts": 3.0, "beliefs": 12.0, "thought": 5.0, "other": 4.0}},
+        {"tournament": "2025 Penn Bowl", "difficulty": 2.5, "ppg": 10.0,
+         "cats": {"lit": 0.0, "hist": 3.0, "sci": 0.0, "arts": 0.5, "beliefs": 4.0, "thought": 1.5, "other": 1.0}},
     ],
     "Emerson Patmore": [
         {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 23.83, "avg_buzz": 117.0,
