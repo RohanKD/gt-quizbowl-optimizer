@@ -48,13 +48,13 @@ PLAYER_DATA = {
          "cats": {"lit": 17.78, "hist": 0.83, "sci": 0.0, "arts": 0.0, "beliefs": 0.0, "thought": 0.0, "other": 2.22}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 41.50,
          "cats": {"lit": 29.0, "hist": 4.5, "sci": 0.0, "arts": 1.0, "beliefs": 1.5, "thought": 2.0, "other": 4.0}},
-        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 27.77,
+        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 29.44,
          "cats": {"lit": 21.94, "hist": 2.22, "sci": 0.83, "arts": 0.56, "beliefs": 2.22, "thought": 0.0, "other": 0.0}},
-        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 30.0,
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 30.91,
          "cats": {"lit": 28.64, "hist": 0.0, "sci": 0.0, "arts": 0.0, "beliefs": 0.91, "thought": 0.45, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 41.0,
          "cats": {"lit": 31.0, "hist": 0.5, "sci": 0.5, "arts": 1.0, "beliefs": 1.0, "thought": 1.0, "other": 5.0}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 25.42,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 34.58,
          "cats": {"lit": 20.42, "hist": 1.67, "sci": 0.83, "arts": 0.83, "beliefs": 0.83, "thought": 0.0, "other": 0.83}},
         {"tournament": "2025 Penn Bowl", "difficulty": 2.5, "ppg": 38.13,
          "cats": {"lit": 30.0, "hist": 3.0, "sci": 0.0, "arts": 1.0, "beliefs": 1.5, "thought": 1.5, "other": 1.0}},
@@ -68,7 +68,7 @@ PLAYER_DATA = {
          "cats": {"lit": 0.0, "hist": 8.5, "sci": 9.0, "arts": 1.0, "beliefs": 0.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 44.0,
          "cats": {"lit": 5.0, "hist": 11.0, "sci": 13.5, "arts": 7.0, "beliefs": 4.5, "thought": 1.0, "other": 2.0}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 58.18,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 61.36,
          "cats": {"lit": 15.91, "hist": 15.0, "sci": 13.18, "arts": 8.64, "beliefs": 1.82, "thought": 2.73, "other": 0.91}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 33.5,
          "cats": {"lit": 5.0, "hist": 8.0, "sci": 5.5, "arts": 2.5, "beliefs": 3.5, "thought": 0.0, "other": 3.0}},
@@ -80,11 +80,11 @@ PLAYER_DATA = {
          "cats": {"lit": 0.0, "hist": 0.83, "sci": 6.11, "arts": 0.0, "beliefs": 1.11, "thought": 0.28, "other": 1.67}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 12.50,
          "cats": {"lit": 0.0, "hist": -1.0, "sci": 9.5, "arts": 0.5, "beliefs": 1.0, "thought": -0.5, "other": 2.0}},
-        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 14.83,
+        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 16.39,
          "cats": {"lit": 0.0, "hist": 1.39, "sci": 11.39, "arts": 0.0, "beliefs": 0.83, "thought": 1.11, "other": 0.56}},
-        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 29.73,
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 30.45,
          "cats": {"lit": 0.91, "hist": 1.82, "sci": 20.91, "arts": 1.82, "beliefs": 0.45, "thought": 3.64, "other": 0.0}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 26.67,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 35.83,
          "cats": {"lit": 1.67, "hist": 1.67, "sci": 18.75, "arts": 0.83, "beliefs": 3.33, "thought": 0.42, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 21.5,
          "cats": {"lit": 0.0, "hist": 0.0, "sci": 15.0, "arts": 0.0, "beliefs": 1.5, "thought": 2.5, "other": 0.0}},
@@ -96,29 +96,27 @@ PLAYER_DATA = {
          "cats": {"lit": 0.0, "hist": 0.0, "sci": 1.67, "arts": 13.06, "beliefs": 1.11, "thought": 0.56, "other": 0.83}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 16.50,
          "cats": {"lit": 0.0, "hist": 2.0, "sci": 0.0, "arts": 10.0, "beliefs": 4.5, "thought": -0.5, "other": 0.0}},
-        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 5.28,
+        {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 9.72,
          "cats": {"lit": 0.56, "hist": 0.56, "sci": 1.11, "arts": 2.22, "beliefs": 0.56, "thought": 0.28, "other": 0.0}},
-        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 22.27,
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 23.18,
          "cats": {"lit": 0.0, "hist": 3.18, "sci": 0.45, "arts": 12.73, "beliefs": 4.09, "thought": 1.82, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 51.5,
          "cats": {"lit": 2.5, "hist": 8.0, "sci": 4.0, "arts": 5.0, "beliefs": 4.5, "thought": 4.0, "other": 0.0}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 3.33,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 34.58,
          "cats": {"lit": 0.83, "hist": 0.0, "sci": 0.83, "arts": 0.83, "beliefs": 0.0, "thought": 0.83, "other": 0.0}},
-        {"tournament": "DART IV", "difficulty": 1.5, "ppg": 66.1,
-         "cats": {"lit": 5.0, "hist": 10.0, "sci": 5.0, "arts": 25.0, "beliefs": 10.0, "thought": 8.0, "other": 3.0}},
     ],
     "Tianyu Xu": [
         {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 16.94, "avg_buzz": 120.0,
          "cats": {"lit": 1.67, "hist": 3.89, "sci": 7.22, "arts": 3.06, "beliefs": -0.28, "thought": 0.28, "other": 1.11}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 37.0,
          "cats": {"lit": 1.33, "hist": 5.0, "sci": 11.67, "arts": 5.67, "beliefs": 0.33, "thought": 0.67, "other": 1.67}},
-        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 23.5,
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 23.0,
          "cats": {"lit": 5.0, "hist": 3.0, "sci": 12.5, "arts": 2.0, "beliefs": 1.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 51.36,
          "cats": {"lit": 6.36, "hist": 10.0, "sci": 13.64, "arts": 10.91, "beliefs": 5.45, "thought": 0.91, "other": 1.82}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 45.91,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 46.82,
          "cats": {"lit": 10.0, "hist": 5.45, "sci": 16.36, "arts": 5.45, "beliefs": 6.36, "thought": -0.45, "other": 2.73}},
-        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 47.27,
+        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 53.64,
          "cats": {"lit": 9.55, "hist": 10.0, "sci": 14.55, "arts": 7.27, "beliefs": 5.45, "thought": 0.0, "other": 0.45}},
         {"tournament": "HISTONE", "difficulty": 1.5, "ppg": 50.83,
          "cats": {"lit": 5.0, "hist": 8.0, "sci": 18.0, "arts": 8.0, "beliefs": 5.0, "thought": 3.0, "other": 4.0}},
@@ -134,7 +132,7 @@ PLAYER_DATA = {
          "cats": {"lit": 6.0, "hist": 1.33, "sci": 4.67, "arts": 4.33, "beliefs": 0.67, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 59.55,
          "cats": {"lit": 16.36, "hist": 3.64, "sci": 7.27, "arts": 20.45, "beliefs": 4.55, "thought": 1.82, "other": 3.64}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 29.55,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 31.82,
          "cats": {"lit": 13.18, "hist": 0.91, "sci": 7.27, "arts": 3.64, "beliefs": 4.55, "thought": 0.0, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 51.5,
          "cats": {"lit": 9.5, "hist": 7.0, "sci": 12.0, "arts": 1.5, "beliefs": 6.0, "thought": 3.0, "other": 0.0}},
@@ -168,22 +166,18 @@ PLAYER_DATA = {
          "cats": {"lit": 0.67, "hist": 3.67, "sci": 0.0, "arts": 0.33, "beliefs": 8.33, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 33.64,
          "cats": {"lit": -0.91, "hist": 13.64, "sci": 0.91, "arts": 1.82, "beliefs": 10.45, "thought": 3.64, "other": 0.0}},
-        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 11.5,
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 16.0,
          "cats": {"lit": 0.0, "hist": 5.0, "sci": 1.0, "arts": 1.0, "beliefs": 3.0, "thought": 0.5, "other": 1.0}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 20.91,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 24.55,
          "cats": {"lit": 1.82, "hist": 6.36, "sci": 1.82, "arts": 2.73, "beliefs": 6.82, "thought": 1.36, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 26.5,
          "cats": {"lit": 2.0, "hist": 9.5, "sci": 0.5, "arts": 2.0, "beliefs": 2.0, "thought": 5.0, "other": 0.5}},
-        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 30.45,
+        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 42.27,
          "cats": {"lit": 5.45, "hist": 9.09, "sci": 3.64, "arts": -0.45, "beliefs": 6.82, "thought": 4.55, "other": 1.36}},
         {"tournament": "HISTONE", "difficulty": 1.5, "ppg": 16.67,
          "cats": {"lit": 1.0, "hist": 4.0, "sci": 0.0, "arts": 0.5, "beliefs": 7.0, "thought": 2.5, "other": 1.5}},
-        {"tournament": "Planetfall III", "difficulty": 1.5, "ppg": 35.0,
-         "cats": {"lit": 3.0, "hist": 8.0, "sci": 2.0, "arts": 3.0, "beliefs": 10.0, "thought": 5.0, "other": 4.0}},
-        {"tournament": "DART IV", "difficulty": 1.5, "ppg": 41.1,
+        {"tournament": "DART IV", "difficulty": 1.5, "ppg": 41.11,
          "cats": {"lit": 3.0, "hist": 12.0, "sci": 2.0, "arts": 3.0, "beliefs": 12.0, "thought": 5.0, "other": 4.0}},
-        {"tournament": "2025 Penn Bowl", "difficulty": 2.5, "ppg": 10.0,
-         "cats": {"lit": 0.0, "hist": 3.0, "sci": 0.0, "arts": 0.5, "beliefs": 4.0, "thought": 1.5, "other": 1.0}},
     ],
     "Emerson Patmore": [
         {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 23.83, "avg_buzz": 117.0,
@@ -206,9 +200,9 @@ PLAYER_DATA = {
          "cats": {"lit": 1.94, "hist": 5.28, "sci": 6.11, "arts": 0.28, "beliefs": 1.11, "thought": 0.56, "other": 1.39}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 27.19,
          "cats": {"lit": 0.63, "hist": 5.63, "sci": 4.06, "arts": 1.25, "beliefs": 1.88, "thought": 2.5, "other": 0.0}},
-        {"tournament": "2024 ACF Nationals", "difficulty": 4.0, "ppg": 25.88,
+        {"tournament": "2024 ACF Nationals", "difficulty": 4.0, "ppg": 27.06,
          "cats": {"lit": 2.35, "hist": 7.94, "sci": 9.12, "arts": 0.29, "beliefs": 1.76, "thought": 2.06, "other": 2.35}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 25.45,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 30.91,
          "cats": {"lit": 4.55, "hist": 4.55, "sci": 11.36, "arts": 0.91, "beliefs": 2.73, "thought": 1.82, "other": -0.45}},
         {"tournament": "HISTONE", "difficulty": 1.5, "ppg": 59.58,
          "cats": {"lit": 6.0, "hist": 15.0, "sci": 18.0, "arts": 5.0, "beliefs": 5.0, "thought": 5.0, "other": 6.0}},
@@ -222,7 +216,7 @@ PLAYER_DATA = {
          "cats": {"lit": 3.13, "hist": 1.25, "sci": 9.06, "arts": 0.0, "beliefs": 1.25, "thought": 0.94, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 28.64,
          "cats": {"lit": 3.64, "hist": 0.91, "sci": 10.0, "arts": 3.18, "beliefs": 2.27, "thought": 3.18, "other": -0.45}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 14.09,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 18.18,
          "cats": {"lit": 3.64, "hist": 3.18, "sci": 5.45, "arts": 1.36, "beliefs": 0.91, "thought": 0.0, "other": -0.45}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 19.5,
          "cats": {"lit": 3.0, "hist": 0.5, "sci": 11.0, "arts": 0.0, "beliefs": -0.5, "thought": 2.5, "other": 0.5}},
@@ -240,7 +234,7 @@ PLAYER_DATA = {
          "cats": {"lit": 1.25, "hist": 0.0, "sci": 1.25, "arts": 9.38, "beliefs": -0.31, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 30.0,
          "cats": {"lit": 4.09, "hist": 5.91, "sci": 2.27, "arts": 12.73, "beliefs": 3.64, "thought": 0.45, "other": 0.91}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 20.91,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 24.09,
          "cats": {"lit": 4.55, "hist": 4.09, "sci": 2.27, "arts": 8.64, "beliefs": -0.45, "thought": 1.82, "other": 0.0}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 51.0,
          "cats": {"lit": 10.5, "hist": 6.0, "sci": 7.5, "arts": 3.0, "beliefs": 4.0, "thought": 2.0, "other": 2.0}},
@@ -252,7 +246,7 @@ PLAYER_DATA = {
          "cats": {"lit": 1.67, "hist": 7.0, "sci": 0.33, "arts": 0.33, "beliefs": 1.33, "thought": 0.67, "other": 2.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 17.73,
          "cats": {"lit": 1.36, "hist": 10.0, "sci": 0.91, "arts": -0.45, "beliefs": 1.82, "thought": 1.82, "other": 0.0}},
-        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 37.73,
+        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 41.36,
          "cats": {"lit": 8.64, "hist": 13.18, "sci": 10.91, "arts": 1.82, "beliefs": 1.36, "thought": 1.36, "other": 0.45}},
         {"tournament": "2024 ARCADIA", "difficulty": 2.0, "ppg": 8.0,
          "cats": {"lit": 0.0, "hist": 6.5, "sci": 0.0, "arts": 0.0, "beliefs": 0.0, "thought": 1.5, "other": 0.0}},
@@ -262,9 +256,9 @@ PLAYER_DATA = {
          "cats": {"lit": 0.33, "hist": 1.0, "sci": 5.67, "arts": 1.0, "beliefs": 2.67, "thought": 1.33, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 18.18,
          "cats": {"lit": 0.91, "hist": 1.82, "sci": 9.55, "arts": 0.91, "beliefs": 1.82, "thought": 0.91, "other": 0.45}},
-        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 50.45,
+        {"tournament": "2024 ACF Fall", "difficulty": 1.0, "ppg": 57.27,
          "cats": {"lit": 9.55, "hist": 4.55, "sci": 17.73, "arts": 5.0, "beliefs": 7.73, "thought": 1.82, "other": 4.09}},
-        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 16.36,
+        {"tournament": "2024 ACF Winter", "difficulty": 2.0, "ppg": 18.18,
          "cats": {"lit": 2.73, "hist": -0.45, "sci": 7.27, "arts": 2.73, "beliefs": 2.27, "thought": 0.91, "other": 0.0}},
     ],
     "S.A. Shenoy": [
@@ -272,7 +266,7 @@ PLAYER_DATA = {
          "cats": {"lit": 4.0, "hist": 0.33, "sci": 8.67, "arts": 7.33, "beliefs": 3.67, "thought": 1.67, "other": 4.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 44.55,
          "cats": {"lit": 12.73, "hist": 2.73, "sci": 14.55, "arts": 3.64, "beliefs": 7.27, "thought": 1.36, "other": 1.36}},
-        {"tournament": "2023 ACF Nationals", "difficulty": 4.0, "ppg": 20.88,
+        {"tournament": "2023 ACF Nationals", "difficulty": 4.0, "ppg": 21.47,
          "cats": {"lit": 2.06, "hist": 1.18, "sci": 8.53, "arts": 5.0, "beliefs": 0.29, "thought": 2.65, "other": 1.18}},
     ],
     "Manu Sankaran": [
@@ -1001,3 +995,54 @@ with tab5:
             entry_str = f'{{"tournament": "{paste_tournament}", "difficulty": {paste_difficulty}, "ppg": {total_points/paste_games:.1f},\n'
             entry_str += f' "cats": {{"lit": {parsed_cats["lit"]:.2f}, "hist": {parsed_cats["hist"]:.2f}, "sci": {parsed_cats["sci"]:.2f}, "arts": {parsed_cats["arts"]:.2f}, "beliefs": {parsed_cats["beliefs"]:.2f}, "thought": {parsed_cats["thought"]:.2f}, "other": {parsed_cats["other"]:.2f}}}}}'
             st.code(entry_str, language="python")
+
+# ============================================================
+# CITATIONS / DATA SOURCES
+# ============================================================
+st.divider()
+st.header("Data Sources & Citations")
+st.markdown("""
+**PPG (Points Per Game)** for all tournaments verified against [quizbowlstats.com](https://quizbowlstats.com) player profiles.
+
+**2026 ACF Nationals category breakdowns & buzz positions** from [2026 ACF Nationals Buzzpoints](https://2026-nationals.vercel.app/set/2026-acf-nationals/).
+
+**Category PPG** for other tournaments derived from buzzpoints data on quizbowlstats.com where available.
+Note: Category PPGs may not sum exactly to total PPG because buzzpoints data doesn't always cover every question.
+
+#### Player Profile Links (quizbowlstats.com)
+""")
+
+player_urls = {
+    "Kevin Wang": "https://quizbowlstats.com/players/kevin-wang-4",
+    "Arunn Sankar": "https://quizbowlstats.com/players/arunn-sankar",
+    "Rohan Dalal": "https://quizbowlstats.com/players/rohan-dalal",
+    "Jeffrey Xu": "https://quizbowlstats.com/players/jeffrey-xu",
+    "Tianyu Xu": "https://quizbowlstats.com/players/tianyu-xu",
+    "Alex Thomas": "https://quizbowlstats.com/players/alex-thomas",
+    "Pranav Jothi": "https://quizbowlstats.com/players/pranav-jothi",
+    "Arhith Dharanendra": "https://quizbowlstats.com/players/arhith-dharanendra",
+    "Emerson Patmore": "https://quizbowlstats.com/players/emerson-patmore",
+    "Graham Cope": "https://quizbowlstats.com/players/graham-cope",
+    "Matthew Sumanen": "https://quizbowlstats.com/players/matthew-sumanen",
+    "Zach Tseng": "https://quizbowlstats.com/players/zach-tseng",
+    "Aaryan Tomar": "https://quizbowlstats.com/players/aaryan-tomar",
+    "Monish Jampala": "https://quizbowlstats.com/players/monish-jampala",
+    "S.A. Shenoy": "https://quizbowlstats.com/players/s.-a.-shenoy",
+    "Samir Sarma": "https://quizbowlstats.com/players/samir-sarma",
+}
+
+links_md = ""
+for name, url in player_urls.items():
+    links_md += f"- [{name}]({url})\n"
+st.markdown(links_md)
+
+st.markdown("""
+#### 2026 ACF Nationals Buzzpoints
+""")
+nats_links = ""
+for name in ["kevin-wang", "arunn-sankar", "rohan-dalal", "jeffrey-xu", "tianyu-xu",
+             "alex-thomas", "pranav-jothi", "arhith-dharanendra", "emerson-patmore",
+             "graham-cope", "matthew-sumanen", "zach-tseng"]:
+    display = name.replace("-", " ").title()
+    nats_links += f"- [{display}](https://2026-nationals.vercel.app/set/2026-acf-nationals/player/{name})\n"
+st.markdown(nats_links)
