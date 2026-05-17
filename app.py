@@ -279,9 +279,13 @@ PLAYER_DATA = {
         # No ACF category data available - only NAQT Sectional participation (GT C)
     ],
     "Samir Sarma": [
+        {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 46.0,
+         "cats": {"lit": 4.0, "hist": 13.5, "sci": 12.5, "arts": 7.5, "beliefs": 8.0, "thought": -0.5, "other": 1.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 38.64,
-         "cats": {"lit": 6.0, "hist": 8.0, "sci": 10.0, "arts": 5.0, "beliefs": 4.0, "thought": 2.0, "other": 3.0}},
-        {"tournament": "DART IV", "difficulty": 1.5, "ppg": 0.0,
+         "cats": {"lit": 6.36, "hist": 3.64, "sci": 18.64, "arts": 4.55, "beliefs": 0.0, "thought": 3.18, "other": 1.36}},
+        {"tournament": "2023 DII ICT", "difficulty": 2.0, "ppg": 25.0,
+         "cats": {"lit": 0, "hist": 0, "sci": 0, "arts": 0, "beliefs": 0, "thought": 0, "other": 0}},
+        {"tournament": "2023 ACF Regionals", "difficulty": 3.0, "ppg": 25.91,
          "cats": {"lit": 0, "hist": 0, "sci": 0, "arts": 0, "beliefs": 0, "thought": 0, "other": 0}},
     ],
 }
@@ -637,59 +641,171 @@ with tab3:
             st.plotly_chart(fig_cmp, use_container_width=True)
 
 
+# --- Keyword-based question classifier ---
+SUBCAT_KEYWORDS = {
+    "lit": {
+        "American Lit": ["american", "fitzgerald", "hemingway", "twain", "faulkner", "poe", "melville", "hawthorne",
+                         "steinbeck", "vonnegut", "morrison", "gatsby", "moby dick", "catcher"],
+        "British Lit": ["british", "english", "shakespeare", "dickens", "austen", "chaucer", "milton", "byron",
+                        "keats", "shelley", "woolf", "orwell", "hardy", "bronte"],
+        "European Lit": ["european", "french", "russian", "german", "dostoevsky", "tolstoy", "kafka", "proust",
+                         "flaubert", "cervantes", "dante", "goethe", "hugo", "camus", "sartre"],
+        "World Lit": ["japanese", "chinese", "latin american", "african", "borges", "marquez", "rushdie",
+                      "murakami", "achebe", "garcia marquez"],
+        "Poetry": ["poem", "poet", "verse", "stanza", "sonnet", "ode", "elegy", "haiku"],
+        "Drama": ["play", "drama", "tragedy", "comedy", "act", "scene", "playwright", "theater"],
+    },
+    "hist": {
+        "American History": ["american", "united states", "colonial", "revolution", "civil war", "president",
+                            "congress", "constitution", "reconstruction", "new deal", "cold war"],
+        "European History": ["european", "french revolution", "napoleon", "world war", "renaissance", "reformation",
+                            "habsburg", "ottoman", "medieval", "crusade", "roman empire"],
+        "British History": ["british", "england", "parliament", "monarchy", "tudor", "victorian", "magna carta"],
+        "Ancient History": ["ancient", "greek", "roman", "egypt", "mesopotamia", "persian", "byzantine", "classical"],
+        "World History": ["chinese", "japanese", "indian", "african", "colonial", "mongol", "islamic"],
+    },
+    "sci": {
+        "Physics": ["physics", "quantum", "relativity", "electromagnetic", "force", "energy", "momentum", "wave",
+                    "particle", "electron", "photon", "thermodynamic", "entropy", "magnetic", "electric"],
+        "Biology": ["biology", "cell", "dna", "rna", "protein", "gene", "evolution", "species", "organism",
+                    "enzyme", "mitosis", "ecology", "photosynthesis", "membrane", "amino acid"],
+        "Chemistry": ["chemistry", "element", "compound", "reaction", "bond", "acid", "base", "organic",
+                     "molecule", "catalyst", "oxidation", "solution", "periodic", "ion", "isotope"],
+        "Math": ["math", "theorem", "equation", "integral", "derivative", "topology", "algebra", "geometry",
+                "number theory", "prime", "function", "matrix", "vector", "proof"],
+        "Computer Science": ["algorithm", "computer", "programming", "turing", "complexity", "data structure"],
+        "Earth Science": ["geology", "earthquake", "volcano", "plate tectonics", "mineral", "fossil", "climate"],
+        "Astronomy": ["astronomy", "planet", "star", "galaxy", "nebula", "black hole", "orbit", "solar"],
+    },
+    "arts": {
+        "Painting": ["painting", "painter", "canvas", "oil", "fresco", "portrait", "landscape", "impressionist",
+                    "cubist", "surrealist", "renaissance", "baroque", "monet", "picasso", "van gogh", "rembrandt"],
+        "Classical Music": ["symphony", "concerto", "sonata", "opera", "composer", "orchestra", "movement",
+                           "beethoven", "mozart", "bach", "tchaikovsky", "brahms", "chopin", "vivaldi", "mahler"],
+        "Sculpture": ["sculpture", "sculptor", "statue", "bronze", "marble", "relief", "rodin", "bernini"],
+        "Architecture": ["architecture", "architect", "building", "cathedral", "dome", "gothic", "baroque"],
+        "Film": ["film", "director", "movie", "cinema", "scene", "shot", "screenplay"],
+        "Jazz/Pop": ["jazz", "blues", "rock", "album", "song", "band", "musician"],
+    },
+    "beliefs": {
+        "Christianity": ["christian", "bible", "jesus", "church", "gospel", "apostle", "protestant", "catholic",
+                        "saint", "pope", "trinity", "baptism", "reformation"],
+        "Islam": ["islam", "muslim", "quran", "muhammad", "mosque", "sunni", "shia", "hadith", "allah"],
+        "Judaism": ["jewish", "torah", "talmud", "rabbi", "synagogue", "moses", "hebrew"],
+        "Hinduism": ["hindu", "vedas", "brahma", "vishnu", "shiva", "karma", "dharma", "upanishad"],
+        "Buddhism": ["buddhist", "buddha", "nirvana", "dharma", "zen", "enlightenment", "sutra"],
+        "Greek Myth": ["greek myth", "zeus", "athena", "apollo", "heracles", "odysseus", "trojan", "olympus",
+                      "titan", "prometheus", "hercules", "poseidon", "hades"],
+        "Norse Myth": ["norse", "odin", "thor", "loki", "valhalla", "ragnarok", "yggdrasil"],
+        "Other Myth": ["myth", "legend", "folklore", "deity", "god", "goddess", "creation myth"],
+    },
+    "thought": {
+        "Ancient Phil": ["plato", "aristotle", "socrates", "stoic", "epicurean", "republic", "virtue"],
+        "Modern Phil": ["kant", "hegel", "nietzsche", "descartes", "hume", "locke", "spinoza", "leibniz"],
+        "Contemporary": ["wittgenstein", "heidegger", "sartre", "foucault", "derrida", "rawls", "quine"],
+        "Ethics": ["ethics", "moral", "utilitarian", "deontological", "virtue ethics", "categorical imperative"],
+        "Epistemology": ["knowledge", "epistemology", "empiricism", "rationalism", "skepticism", "a priori"],
+    },
+    "other": {
+        "Economics": ["economics", "gdp", "inflation", "market", "keynes", "supply", "demand", "trade", "fiscal"],
+        "Psychology": ["psychology", "freud", "cognitive", "behavioral", "experiment", "pavlov", "skinner"],
+        "Sociology": ["sociology", "society", "weber", "durkheim", "social", "institution", "class"],
+        "Geography": ["geography", "river", "mountain", "continent", "ocean", "island", "capital", "border",
+                     "country", "city", "lake", "desert", "peninsula"],
+        "Political Science": ["political", "government", "democracy", "election", "party", "legislature"],
+        "Anthropology": ["anthropology", "culture", "tribe", "ritual", "kinship", "ethnography"],
+        "Linguistics": ["language", "linguistic", "phoneme", "syntax", "morpheme", "grammar", "dialect"],
+    },
+}
+
+
+def classify_question(text):
+    """Classify a question into category and subcategory using keyword matching."""
+    text_lower = text.lower()
+    scores = {}  # (cat_key, subcat) -> score
+
+    for cat_key, subcats in SUBCAT_KEYWORDS.items():
+        for subcat_name, keywords in subcats.items():
+            score = 0
+            for kw in keywords:
+                if kw in text_lower:
+                    score += len(kw)  # longer keyword matches = higher confidence
+            if score > 0:
+                scores[(cat_key, subcat_name)] = score
+
+    if not scores:
+        return None, ""
+
+    best = max(scores, key=scores.get)
+    return best[0], best[1]
+
+
 # --- TAB 4: Who Gets It? ---
 with tab4:
     st.header("Question Predictor")
-    st.markdown("Input a question's category to see who on GT is most likely to buzz.")
+    st.markdown("Type or paste a question and it'll classify the category and predict who buzzes.")
 
-    category_input = st.selectbox(
-        "Question Category",
-        list(CATEGORY_LABELS.values())
-    )
+    question_text = st.text_area("Paste a question here",
+                                  placeholder="This American author's 1925 novel features the character Jay Gatsby...",
+                                  height=150)
 
-    subcategory = st.text_input("Subcategory (optional)", placeholder="e.g., American, Biology, Painting...")
+    col_mode1, col_mode2 = st.columns(2)
+    with col_mode1:
+        auto_classify = st.checkbox("Auto-classify from text", value=True)
+    with col_mode2:
+        manual_cat = st.selectbox("Or select category manually",
+                                  ["(auto)"] + list(CATEGORY_LABELS.values()))
 
     team_filter = st.multiselect(
-        "Filter to specific team (leave empty for all)",
+        "Filter to specific players (leave empty for all)",
         [p for p in PLAYER_DATA if PLAYER_DATA[p]],
         key="who_gets_filter"
     )
 
-    if category_input:
-        # Find the key
+    if st.button("Analyze Question", type="primary"):
         cat_key = None
-        for key, label in CATEGORY_LABELS.items():
-            if label == category_input:
-                cat_key = key
-                break
+        subcategory = ""
+
+        if auto_classify and manual_cat == "(auto)" and question_text.strip():
+            cat_key, subcategory = classify_question(question_text)
+            if cat_key:
+                st.success(f"**Detected:** {CATEGORY_LABELS[cat_key]} → {subcategory}")
+            else:
+                st.warning("Couldn't classify — try selecting category manually.")
+        elif manual_cat != "(auto)":
+            for key, label in CATEGORY_LABELS.items():
+                if label == manual_cat:
+                    cat_key = key
+                    break
 
         if cat_key:
-            results = []
             pool = team_filter if team_filter else [p for p in PLAYER_DATA if PLAYER_DATA[p]]
+            results = []
             for player in pool:
                 cat_ppg = compute_weighted_category_ppg(player, min_difficulty=2.0)
                 ppg_in_cat = cat_ppg.get(cat_key, 0)
-                # Estimate conversion probability based on PPG
-                # At nationals, ~4 tossups worth 10-15 pts each in big categories
+                sf = compute_speed_factor(player, min_difficulty=2.0)
                 tossups_per_round = NATS_DISTRIBUTION.get(cat_key, 1)
-                max_possible = tossups_per_round * 15  # max with all powers
-                prob = min(max(ppg_in_cat / max_possible, 0), 1.0) if max_possible > 0 else 0
+                max_possible = tossups_per_round * 15
+                adj_ppg = ppg_in_cat * sf
+                prob = min(max(adj_ppg / max_possible, 0), 1.0) if max_possible > 0 else 0
                 results.append({
                     "Player": player,
                     "Cat PPG": round(ppg_in_cat, 2),
-                    "Est. Buzz Prob": f"{prob*100:.0f}%",
-                    "Est. Gets/Round": round(ppg_in_cat / 10, 2)
+                    "Speed": f"{sf:.2f}x",
+                    "Adj PPG": round(adj_ppg, 2),
+                    "Buzz Prob": f"{prob*100:.0f}%",
                 })
 
-            results.sort(key=lambda x: x["Cat PPG"], reverse=True)
+            results.sort(key=lambda x: x["Adj PPG"], reverse=True)
             results_df = pd.DataFrame(results)
             st.dataframe(results_df, use_container_width=True, hide_index=True)
 
             # Bar chart
             fig_who = px.bar(
-                results_df, x="Player", y="Cat PPG",
-                title=f"Who buzzes on {category_input}?",
-                color="Cat PPG", color_continuous_scale="Viridis"
+                results_df, x="Player", y="Adj PPG",
+                title=f"Who buzzes on {CATEGORY_LABELS.get(cat_key, '')}?{' (' + subcategory + ')' if subcategory else ''}",
+                color="Adj PPG", color_continuous_scale="Viridis"
             )
             st.plotly_chart(fig_who, use_container_width=True)
 
