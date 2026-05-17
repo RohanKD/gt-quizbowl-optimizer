@@ -1046,3 +1046,31 @@ for name in ["kevin-wang", "arunn-sankar", "rohan-dalal", "jeffrey-xu", "tianyu-
     display = name.replace("-", " ").title()
     nats_links += f"- [{display}](https://2026-nationals.vercel.app/set/2026-acf-nationals/player/{name})\n"
 st.markdown(nats_links)
+
+st.markdown("""
+#### Tournament Stats Pages
+PPG values verified against these tournament pages on quizbowlstats.com and hsquizbowl.org:
+""")
+
+tournament_urls = {
+    "2026 ACF Nationals": "https://2026-nationals.vercel.app/set/2026-acf-nationals/",
+    "2026 ACF Regionals (Southeast)": "https://quizbowlstats.com/tournaments/2026-acf-regionals-southeast-at-washington",
+    "2025 ACF Winter (Southeast)": "https://quizbowlstats.com/tournaments/2025-acf-winter-southeast-at-clemson",
+    "2025 ACF Fall (Southeast)": "https://quizbowlstats.com/tournaments/2025-acf-fall-southeast-at-georgia-tech",
+    "2025 ACF Nationals": "https://quizbowlstats.com/tournaments/2025-acf-nationals-at-maryland",
+    "2025 ACF Regionals (Southeast)": "https://quizbowlstats.com/tournaments/2025-acf-regionals-southeast-at-vanderbilt",
+    "2025 Penn Bowl": "https://quizbowlstats.com/tournaments/2026-penn-bowl-at-penn",
+    "2024 ACF Winter (Southeast)": "https://quizbowlstats.com/tournaments/2024-acf-winter-southeast-at-clemson",
+    "2024 ACF Fall (Southeast)": "https://quizbowlstats.com/tournaments/2024-acf-fall-southeast-at-georgia-tech",
+    "2024 ACF Nationals": "https://quizbowlstats.com/tournaments/2024-acf-nationals-at-minnesota",
+    "HISTONE": "https://quizbowlstats.com/tournaments/histone-at-georgia-tech",
+    "Planetfall III": "https://quizbowlstats.com/tournaments/planetfall-iii-at-florida",
+    "2024 ARCADIA": "https://quizbowlstats.com/tournaments/arcadia-at-georgia-tech",
+    "DART IV": "https://quizbowlstats.com/tournaments/dart-iv-at-georgia-tech",
+    "2023 ACF Nationals": "https://quizbowlstats.com/tournaments/2023-acf-nationals-at-vanderbilt",
+}
+
+tourn_md = ""
+for name, url in tournament_urls.items():
+    tourn_md += f"- [{name}]({url})\n"
+st.markdown(tourn_md)
