@@ -326,7 +326,7 @@ def get_player_avg_rank(player_name, min_difficulty=0.0):
             continue
         if entry.get("avg_rank") is None:
             continue
-        if all(v == 0 for v in entry["cats"].values()):
+        if entry["ppg"] == 0:
             continue
         weight = entry["difficulty"] ** 2
         if entry.get("tournament", "").startswith("2025") or entry.get("tournament", "").startswith("2026"):
@@ -365,8 +365,8 @@ def compute_weighted_category_ppg(player_name, min_difficulty=0.0):
     for entry in data:
         if entry["difficulty"] < min_difficulty:
             continue
-        if all(v == 0 for v in entry["cats"].values()):
-            continue  # skip entries with no category data
+        if entry["ppg"] == 0:
+            continue  # skip tournaments with 0 PPG (bad/missing data)
         # QUADRATIC weighting: difficulty^2
         weight = entry["difficulty"] ** 2
         # Recency boost for 25-26 season
@@ -749,12 +749,25 @@ with tab4:
                                   placeholder="This American author's 1925 novel features the character Jay Gatsby...",
                                   height=150)
 
-    col_mode1, col_mode2 = st.columns(2)
-    with col_mode1:
-        auto_classify = st.checkbox("Auto-classify from text", value=True)
-    with col_mode2:
-        manual_cat = st.selectbox("Or select category manually",
-                                  ["(auto)"] + list(CATEGORY_LABELS.values()))
+    # Auto-classify on the fly
+    detected_cat = None
+    detected_sub = ""
+    if question_text.strip():
+        detected_cat, detected_sub = classify_question(question_text)
+
+    # Show detected + allow override
+    cat_options = list(CATEGORY_LABELS.values())
+    default_idx = 0
+    if detected_cat:
+        st.info(f"**Auto-detected:** {CATEGORY_LABELS[detected_cat]} → {detected_sub}")
+        default_idx = cat_options.index(CATEGORY_LABELS[detected_cat])
+
+    selected_cat_label = st.selectbox(
+        "Category (auto-detected or select to override)",
+        cat_options,
+        index=default_idx,
+        key="who_gets_cat"
+    )
 
     team_filter = st.multiselect(
         "Filter to specific players (leave empty for all)",
@@ -762,52 +775,43 @@ with tab4:
         key="who_gets_filter"
     )
 
-    if st.button("Analyze Question", type="primary"):
-        cat_key = None
-        subcategory = ""
+    # Always show results based on selected category
+    cat_key = None
+    for key, label in CATEGORY_LABELS.items():
+        if label == selected_cat_label:
+            cat_key = key
+            break
 
-        if auto_classify and manual_cat == "(auto)" and question_text.strip():
-            cat_key, subcategory = classify_question(question_text)
-            if cat_key:
-                st.success(f"**Detected:** {CATEGORY_LABELS[cat_key]} → {subcategory}")
-            else:
-                st.warning("Couldn't classify — try selecting category manually.")
-        elif manual_cat != "(auto)":
-            for key, label in CATEGORY_LABELS.items():
-                if label == manual_cat:
-                    cat_key = key
-                    break
+    if cat_key:
+        pool = team_filter if team_filter else [p for p in PLAYER_DATA if PLAYER_DATA[p]]
+        results = []
+        for player in pool:
+            cat_ppg = compute_weighted_category_ppg(player, min_difficulty=2.0)
+            ppg_in_cat = cat_ppg.get(cat_key, 0)
+            sf = compute_speed_factor(player, min_difficulty=2.0)
+            tossups_per_round = NATS_DISTRIBUTION.get(cat_key, 1)
+            max_possible = tossups_per_round * 15
+            adj_ppg = ppg_in_cat * sf
+            prob = min(max(adj_ppg / max_possible, 0), 1.0) if max_possible > 0 else 0
+            results.append({
+                "Player": player,
+                "Cat PPG": round(ppg_in_cat, 2),
+                "Speed": f"{sf:.2f}x",
+                "Adj PPG": round(adj_ppg, 2),
+                "Buzz Prob": f"{prob*100:.0f}%",
+            })
 
-        if cat_key:
-            pool = team_filter if team_filter else [p for p in PLAYER_DATA if PLAYER_DATA[p]]
-            results = []
-            for player in pool:
-                cat_ppg = compute_weighted_category_ppg(player, min_difficulty=2.0)
-                ppg_in_cat = cat_ppg.get(cat_key, 0)
-                sf = compute_speed_factor(player, min_difficulty=2.0)
-                tossups_per_round = NATS_DISTRIBUTION.get(cat_key, 1)
-                max_possible = tossups_per_round * 15
-                adj_ppg = ppg_in_cat * sf
-                prob = min(max(adj_ppg / max_possible, 0), 1.0) if max_possible > 0 else 0
-                results.append({
-                    "Player": player,
-                    "Cat PPG": round(ppg_in_cat, 2),
-                    "Speed": f"{sf:.2f}x",
-                    "Adj PPG": round(adj_ppg, 2),
-                    "Buzz Prob": f"{prob*100:.0f}%",
-                })
+        results.sort(key=lambda x: x["Adj PPG"], reverse=True)
+        results_df = pd.DataFrame(results)
+        st.dataframe(results_df, use_container_width=True, hide_index=True)
 
-            results.sort(key=lambda x: x["Adj PPG"], reverse=True)
-            results_df = pd.DataFrame(results)
-            st.dataframe(results_df, use_container_width=True, hide_index=True)
-
-            # Bar chart
-            fig_who = px.bar(
-                results_df, x="Player", y="Adj PPG",
-                title=f"Who buzzes on {CATEGORY_LABELS.get(cat_key, '')}?{' (' + subcategory + ')' if subcategory else ''}",
-                color="Adj PPG", color_continuous_scale="Viridis"
-            )
-            st.plotly_chart(fig_who, use_container_width=True)
+        # Bar chart
+        fig_who = px.bar(
+            results_df, x="Player", y="Adj PPG",
+            title=f"Who buzzes on {selected_cat_label}?{' (' + detected_sub + ')' if detected_sub and selected_cat_label == CATEGORY_LABELS.get(detected_cat) else ''}",
+            color="Adj PPG", color_continuous_scale="Viridis"
+        )
+        st.plotly_chart(fig_who, use_container_width=True)
 
 
 # --- TAB 5: Add Stats ---
