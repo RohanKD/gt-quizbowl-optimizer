@@ -44,8 +44,8 @@ TOURNAMENTS = {
 # Format: {player: [{tournament, difficulty, cats: {lit, hist, sci, arts, beliefs, thought, other}, ppg}]}
 PLAYER_DATA = {
     "Kevin Wang": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 35.0, "avg_rank": 4.5, "accuracy": 0.78,
-         "cats": {"lit": 28.0, "hist": 3.0, "sci": 0.0, "arts": 0.0, "beliefs": 1.0, "thought": 1.0, "other": 2.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 20.83, "avg_buzz": 109.4,
+         "cats": {"lit": 17.78, "hist": 0.83, "sci": 0.0, "arts": 0.0, "beliefs": 0.0, "thought": 0.0, "other": 2.22}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 41.50,
          "cats": {"lit": 29.0, "hist": 4.5, "sci": 0.0, "arts": 1.0, "beliefs": 1.5, "thought": 2.0, "other": 4.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 27.77,
@@ -62,8 +62,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0, "hist": 0, "sci": 0, "arts": 0, "beliefs": 0, "thought": 0, "other": 0}},
     ],
     "Arunn Sankar": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 5.3, "avg_rank": 10.1, "accuracy": 0.53,
-         "cats": {"lit": 0.5, "hist": 2.0, "sci": 1.0, "arts": 0.3, "beliefs": 0.5, "thought": 0.3, "other": 1.5}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.83, "avg_buzz": 120.4,
+         "cats": {"lit": 0.56, "hist": 3.33, "sci": 2.5, "arts": 0.56, "beliefs": 0.28, "thought": 0.56, "other": 3.06}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 20.0,
          "cats": {"lit": 0.0, "hist": 8.5, "sci": 9.0, "arts": 1.0, "beliefs": 0.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 44.0,
@@ -76,8 +76,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0.59, "hist": 4.41, "sci": 7.35, "arts": 0.59, "beliefs": 0.0, "thought": 0.0, "other": 2.35}},
     ],
     "Rohan Dalal": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 22.0, "avg_rank": 5.5, "accuracy": 0.70,
-         "cats": {"lit": 0.0, "hist": 1.5, "sci": 17.0, "arts": 0.3, "beliefs": 0.0, "thought": 1.5, "other": 1.5}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.0, "avg_buzz": 107.1,
+         "cats": {"lit": 0.0, "hist": 0.83, "sci": 6.11, "arts": 0.0, "beliefs": 1.11, "thought": 0.28, "other": 1.67}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 12.50,
          "cats": {"lit": 0.0, "hist": -1.0, "sci": 9.5, "arts": 0.5, "beliefs": 1.0, "thought": -0.5, "other": 2.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 14.83,
@@ -92,8 +92,8 @@ PLAYER_DATA = {
          "cats": {"lit": 5.0, "hist": 5.0, "sci": 40.0, "arts": 5.0, "beliefs": 5.0, "thought": 3.0, "other": 2.0}},
     ],
     "Jeffrey Xu": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.0, "avg_rank": 7.0, "accuracy": 0.52,
-         "cats": {"lit": 0.0, "hist": 0.0, "sci": 0.8, "arts": 8.5, "beliefs": -0.5, "thought": 0.3, "other": 0.3}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 17.22, "avg_buzz": 103.3,
+         "cats": {"lit": 0.0, "hist": 0.0, "sci": 1.67, "arts": 13.06, "beliefs": 1.11, "thought": 0.56, "other": 0.83}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 16.50,
          "cats": {"lit": 0.0, "hist": 2.0, "sci": 0.0, "arts": 10.0, "beliefs": 4.5, "thought": -0.5, "other": 0.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 5.28,
@@ -108,8 +108,8 @@ PLAYER_DATA = {
          "cats": {"lit": 5.0, "hist": 10.0, "sci": 5.0, "arts": 25.0, "beliefs": 10.0, "thought": 8.0, "other": 3.0}},
     ],
     "Tianyu Xu": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 28.0, "avg_rank": 5.0, "accuracy": 0.72,
-         "cats": {"lit": 2.5, "hist": 3.0, "sci": 9.0, "arts": 8.5, "beliefs": 0.3, "thought": 1.0, "other": 1.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 16.94, "avg_buzz": 120.0,
+         "cats": {"lit": 1.67, "hist": 3.89, "sci": 7.22, "arts": 3.06, "beliefs": -0.28, "thought": 0.28, "other": 1.11}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 37.0,
          "cats": {"lit": 1.33, "hist": 5.0, "sci": 11.67, "arts": 5.67, "beliefs": 0.33, "thought": 0.67, "other": 1.67}},
         {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 23.5,
@@ -128,8 +128,8 @@ PLAYER_DATA = {
          "cats": {"lit": 3.0, "hist": 5.0, "sci": 13.0, "arts": 5.0, "beliefs": 3.0, "thought": 1.0, "other": 2.0}},
     ],
     "Alex Thomas": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 25.0, "avg_rank": 5.5, "accuracy": 0.68,
-         "cats": {"lit": 3.0, "hist": 2.5, "sci": 5.0, "arts": 8.0, "beliefs": 0.5, "thought": 0.5, "other": 3.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 27.5, "avg_buzz": 115.0,
+         "cats": {"lit": 2.78, "hist": 5.56, "sci": 6.94, "arts": 9.44, "beliefs": 0.83, "thought": 0.0, "other": 1.94}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 30.0,
          "cats": {"lit": 6.0, "hist": 1.33, "sci": 4.67, "arts": 4.33, "beliefs": 0.67, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 59.55,
@@ -144,8 +144,8 @@ PLAYER_DATA = {
          "cats": {"lit": 8.0, "hist": 2.0, "sci": 4.0, "arts": 5.0, "beliefs": 1.5, "thought": 1.0, "other": 1.0}},
     ],
     "Pranav Jothi": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 6.0, "avg_rank": 8.0, "accuracy": 0.68,
-         "cats": {"lit": 5.5, "hist": 0.3, "sci": 0.3, "arts": 0.3, "beliefs": 0.3, "thought": 0.0, "other": 0.3}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 6.39, "avg_buzz": 127.4,
+         "cats": {"lit": 3.61, "hist": 0.56, "sci": 0.28, "arts": 0.28, "beliefs": 0.56, "thought": 0.0, "other": 1.11}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 20.0,
          "cats": {"lit": 13.67, "hist": 0.0, "sci": 0.0, "arts": 0.67, "beliefs": 0.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 23.18,
@@ -162,8 +162,8 @@ PLAYER_DATA = {
          "cats": {"lit": 22.0, "hist": 3.0, "sci": 1.0, "arts": 2.0, "beliefs": 2.0, "thought": 1.0, "other": 0.5}},
     ],
     "Arhith Dharanendra": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.5, "avg_rank": 7.5, "accuracy": 0.75,
-         "cats": {"lit": 0.5, "hist": 2.5, "sci": 0.5, "arts": 0.0, "beliefs": 2.0, "thought": 2.5, "other": 2.5}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 5.56, "avg_buzz": 116.0,
+         "cats": {"lit": 0.56, "hist": 1.67, "sci": 0.0, "arts": 0.0, "beliefs": -0.28, "thought": 2.22, "other": 1.39}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 27.0,
          "cats": {"lit": 0.67, "hist": 3.67, "sci": 0.0, "arts": 0.33, "beliefs": 8.33, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 33.64,
@@ -186,8 +186,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0.0, "hist": 3.0, "sci": 0.0, "arts": 0.5, "beliefs": 4.0, "thought": 1.5, "other": 1.0}},
     ],
     "Emerson Patmore": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 24.0, "avg_rank": 6.0, "accuracy": 0.73,
-         "cats": {"lit": 2.5, "hist": 9.0, "sci": 1.0, "arts": 2.0, "beliefs": 2.5, "thought": 0.5, "other": 4.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 23.83, "avg_buzz": 117.0,
+         "cats": {"lit": 1.11, "hist": 13.33, "sci": 1.39, "arts": 2.5, "beliefs": 1.39, "thought": 0.28, "other": 3.89}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 37.5,
          "cats": {"lit": 1.88, "hist": 9.38, "sci": 1.25, "arts": 1.25, "beliefs": 3.44, "thought": 1.88, "other": 2.5}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 29.09,
@@ -202,8 +202,8 @@ PLAYER_DATA = {
          "cats": {"lit": 2.0, "hist": 12.0, "sci": 2.0, "arts": 2.5, "beliefs": 5.0, "thought": 3.0, "other": 5.0}},
     ],
     "Graham Cope": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 24.0, "avg_rank": 6.5, "accuracy": 0.70,
-         "cats": {"lit": 1.5, "hist": 4.5, "sci": 8.0, "arts": 1.0, "beliefs": 1.0, "thought": 0.3, "other": 3.5}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 16.67, "avg_buzz": 115.0,
+         "cats": {"lit": 1.94, "hist": 5.28, "sci": 6.11, "arts": 0.28, "beliefs": 1.11, "thought": 0.56, "other": 1.39}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 27.19,
          "cats": {"lit": 0.63, "hist": 5.63, "sci": 4.06, "arts": 1.25, "beliefs": 1.88, "thought": 2.5, "other": 0.0}},
         {"tournament": "2024 ACF Nationals", "difficulty": 4.0, "ppg": 25.88,
@@ -216,8 +216,8 @@ PLAYER_DATA = {
          "cats": {"lit": 4.0, "hist": 10.0, "sci": 12.0, "arts": 4.0, "beliefs": 4.0, "thought": 3.0, "other": 4.0}},
     ],
     "Matthew Sumanen": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 15.0, "avg_rank": 7.5, "accuracy": 0.62,
-         "cats": {"lit": 0.5, "hist": 0.5, "sci": 7.5, "arts": -0.3, "beliefs": 0.8, "thought": 3.5, "other": 1.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 7.22, "avg_buzz": 93.8,
+         "cats": {"lit": 0.0, "hist": 1.11, "sci": 3.33, "arts": -0.28, "beliefs": 0.83, "thought": 1.94, "other": 0.28}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 23.44,
          "cats": {"lit": 3.13, "hist": 1.25, "sci": 9.06, "arts": 0.0, "beliefs": 1.25, "thought": 0.94, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 28.64,
@@ -234,8 +234,8 @@ PLAYER_DATA = {
          "cats": {"lit": 3.0, "hist": 2.0, "sci": 12.0, "arts": 2.0, "beliefs": 2.5, "thought": 2.0, "other": 2.0}},
     ],
     "Zach Tseng": [
-        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 14.5, "avg_rank": 5.5, "accuracy": 0.875,
-         "cats": {"lit": 2.0, "hist": 0.0, "sci": 0.3, "arts": 10.0, "beliefs": 0.8, "thought": 0.0, "other": 0.0}},
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 13.89, "avg_buzz": 125.5,
+         "cats": {"lit": 2.78, "hist": 0.56, "sci": 0.28, "arts": 9.17, "beliefs": 1.11, "thought": 0.0, "other": 0.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 16.88,
          "cats": {"lit": 1.25, "hist": 0.0, "sci": 1.25, "arts": 9.38, "beliefs": -0.31, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 30.0,
@@ -377,6 +377,33 @@ PLAYER_SUBCATS = {
 }
 
 
+def get_player_avg_buzz(player_name, min_difficulty=0.0):
+    """Compute difficulty-weighted average buzz position for a player.
+    Lower position = earlier buzz = faster. Returns None if no data available."""
+    data = PLAYER_DATA.get(player_name, [])
+    if not data:
+        return None
+
+    total_buzz = 0.0
+    total_weight = 0.0
+    for entry in data:
+        if entry["difficulty"] < min_difficulty:
+            continue
+        if entry.get("avg_buzz") is None:
+            continue
+        if entry["ppg"] == 0:
+            continue
+        weight = entry["difficulty"] ** 2
+        if entry.get("tournament", "").startswith("2025") or entry.get("tournament", "").startswith("2026"):
+            weight *= 1.3
+        total_buzz += entry["avg_buzz"] * weight
+        total_weight += weight
+
+    if total_weight == 0:
+        return None
+    return total_buzz / total_weight
+
+
 def get_player_avg_rank(player_name, min_difficulty=0.0):
     """Compute difficulty-weighted average buzz rank for a player.
     Lower rank = faster buzzer. Returns None if no rank data available."""
@@ -405,14 +432,24 @@ def get_player_avg_rank(player_name, min_difficulty=0.0):
 
 
 def compute_speed_factor(player_name, min_difficulty=0.0):
-    """Compute a speed multiplier based on average buzz rank.
-    Rank 1 (fastest) -> ~1.35x, Rank 8 (median) -> 1.0x, Rank 15 (slow) -> ~0.65x
-    Players with no rank data get 1.0 (neutral)."""
+    """Compute a speed multiplier using avg_buzz (character position) or avg_rank (player rank).
+    avg_buzz: ~93 (fastest) -> ~1.11x, ~115 (median) -> 1.0x, ~130 (slow) -> ~0.93x
+    avg_rank: rank 1 -> ~1.25x, rank 5 (median) -> 1.0x, rank 10 -> ~0.75x
+    Uses whichever data is available; prefers avg_buzz from buzzpoints."""
+    avg_buzz = get_player_avg_buzz(player_name, min_difficulty)
     avg_rank = get_player_avg_rank(player_name, min_difficulty)
-    if avg_rank is None:
+
+    factors = []
+    if avg_buzz is not None:
+        # Center at 115, each 10 chars earlier = +0.05
+        factors.append(1.0 + (115.0 - avg_buzz) * 0.005)
+    if avg_rank is not None:
+        # Center at 5, each rank lower (faster) = +0.05
+        factors.append(1.0 + (5.0 - avg_rank) * 0.05)
+
+    if not factors:
         return 1.0
-    # Linear scale: each rank away from 8 adjusts by 0.05
-    return 1.0 + (8.0 - avg_rank) * 0.05
+    return sum(factors) / len(factors)
 
 
 def compute_weighted_category_ppg(player_name, min_difficulty=0.0):
@@ -529,9 +566,9 @@ with tab1:
     for player in players:
         cat_ppg = compute_weighted_category_ppg(player, min_difficulty=min_diff)
         sf = compute_speed_factor(player, min_difficulty=min_diff)
-        avg_r = get_player_avg_rank(player, min_difficulty=min_diff)
+        avg_b = get_player_avg_buzz(player, min_difficulty=min_diff)
         row = {"Player": player, "Total PPG": round(sum(cat_ppg.values()) * sf, 2),
-               "Avg Rank": round(avg_r, 1) if avg_r else "—",
+               "Avg Buzz": round(avg_b, 1) if avg_b else None,
                "Speed": f"{sf:.2f}x"}
         for cat, label in CATEGORY_LABELS.items():
             row[label] = round(cat_ppg[cat], 2)
