@@ -326,7 +326,7 @@ def get_player_avg_rank(player_name, min_difficulty=0.0):
             continue
         if entry.get("avg_rank") is None:
             continue
-        if entry["ppg"] == 0 and all(v == 0 for v in entry["cats"].values()):
+        if all(v == 0 for v in entry["cats"].values()):
             continue
         weight = entry["difficulty"] ** 2
         if entry.get("tournament", "").startswith("2025") or entry.get("tournament", "").startswith("2026"):
@@ -365,8 +365,8 @@ def compute_weighted_category_ppg(player_name, min_difficulty=0.0):
     for entry in data:
         if entry["difficulty"] < min_difficulty:
             continue
-        if entry["ppg"] == 0 and all(v == 0 for v in entry["cats"].values()):
-            continue  # skip empty entries
+        if all(v == 0 for v in entry["cats"].values()):
+            continue  # skip entries with no category data
         # QUADRATIC weighting: difficulty^2
         weight = entry["difficulty"] ** 2
         # Recency boost for 25-26 season
