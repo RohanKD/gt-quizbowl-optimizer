@@ -44,6 +44,8 @@ TOURNAMENTS = {
 # Format: {player: [{tournament, difficulty, cats: {lit, hist, sci, arts, beliefs, thought, other}, ppg}]}
 PLAYER_DATA = {
     "Kevin Wang": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 35.0,
+         "cats": {"lit": 28.0, "hist": 3.0, "sci": 0.0, "arts": 0.0, "beliefs": 1.0, "thought": 1.0, "other": 2.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 41.50,
          "cats": {"lit": 29.0, "hist": 4.5, "sci": 0.0, "arts": 1.0, "beliefs": 1.5, "thought": 2.0, "other": 4.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 27.77,
@@ -60,6 +62,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0, "hist": 0, "sci": 0, "arts": 0, "beliefs": 0, "thought": 0, "other": 0}},
     ],
     "Arunn Sankar": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 5.3,
+         "cats": {"lit": 0.5, "hist": 2.0, "sci": 1.0, "arts": 0.3, "beliefs": 0.5, "thought": 0.3, "other": 1.5}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 20.0,
          "cats": {"lit": 0.0, "hist": 8.5, "sci": 9.0, "arts": 1.0, "beliefs": 0.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 44.0,
@@ -72,6 +76,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0.59, "hist": 4.41, "sci": 7.35, "arts": 0.59, "beliefs": 0.0, "thought": 0.0, "other": 2.35}},
     ],
     "Rohan Dalal": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 22.0,
+         "cats": {"lit": 0.0, "hist": 1.5, "sci": 17.0, "arts": 0.3, "beliefs": 0.0, "thought": 1.5, "other": 1.5}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 12.50,
          "cats": {"lit": 0.0, "hist": -1.0, "sci": 9.5, "arts": 0.5, "beliefs": 1.0, "thought": -0.5, "other": 2.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 14.83,
@@ -86,6 +92,8 @@ PLAYER_DATA = {
          "cats": {"lit": 5.0, "hist": 5.0, "sci": 40.0, "arts": 5.0, "beliefs": 5.0, "thought": 3.0, "other": 2.0}},
     ],
     "Jeffrey Xu": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.0,
+         "cats": {"lit": 0.0, "hist": 0.0, "sci": 0.8, "arts": 8.5, "beliefs": -0.5, "thought": 0.3, "other": 0.3}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 16.50,
          "cats": {"lit": 0.0, "hist": 2.0, "sci": 0.0, "arts": 10.0, "beliefs": 4.5, "thought": -0.5, "other": 0.0}},
         {"tournament": "2025 ACF Nationals", "difficulty": 4.0, "ppg": 5.28,
@@ -100,6 +108,8 @@ PLAYER_DATA = {
          "cats": {"lit": 5.0, "hist": 10.0, "sci": 5.0, "arts": 25.0, "beliefs": 10.0, "thought": 8.0, "other": 3.0}},
     ],
     "Tianyu Xu": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 28.0,
+         "cats": {"lit": 2.5, "hist": 3.0, "sci": 9.0, "arts": 8.5, "beliefs": 0.3, "thought": 1.0, "other": 1.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 37.0,
          "cats": {"lit": 1.33, "hist": 5.0, "sci": 11.67, "arts": 5.67, "beliefs": 0.33, "thought": 0.67, "other": 1.67}},
         {"tournament": "2025 ACF Regionals", "difficulty": 3.0, "ppg": 23.5,
@@ -118,6 +128,8 @@ PLAYER_DATA = {
          "cats": {"lit": 3.0, "hist": 5.0, "sci": 13.0, "arts": 5.0, "beliefs": 3.0, "thought": 1.0, "other": 2.0}},
     ],
     "Alex Thomas": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 25.0,
+         "cats": {"lit": 3.0, "hist": 2.5, "sci": 5.0, "arts": 8.0, "beliefs": 0.5, "thought": 0.5, "other": 3.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 30.0,
          "cats": {"lit": 6.0, "hist": 1.33, "sci": 4.67, "arts": 4.33, "beliefs": 0.67, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 59.55,
@@ -132,6 +144,8 @@ PLAYER_DATA = {
          "cats": {"lit": 8.0, "hist": 2.0, "sci": 4.0, "arts": 5.0, "beliefs": 1.5, "thought": 1.0, "other": 1.0}},
     ],
     "Pranav Jothi": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 6.0,
+         "cats": {"lit": 5.5, "hist": 0.3, "sci": 0.3, "arts": 0.3, "beliefs": 0.3, "thought": 0.0, "other": 0.3}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 20.0,
          "cats": {"lit": 13.67, "hist": 0.0, "sci": 0.0, "arts": 0.67, "beliefs": 0.0, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 23.18,
@@ -148,6 +162,8 @@ PLAYER_DATA = {
          "cats": {"lit": 22.0, "hist": 3.0, "sci": 1.0, "arts": 2.0, "beliefs": 2.0, "thought": 1.0, "other": 0.5}},
     ],
     "Arhith Dharanendra": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 10.5,
+         "cats": {"lit": 0.5, "hist": 2.5, "sci": 0.5, "arts": 0.0, "beliefs": 2.0, "thought": 2.5, "other": 2.5}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 27.0,
          "cats": {"lit": 0.67, "hist": 3.67, "sci": 0.0, "arts": 0.33, "beliefs": 8.33, "thought": 0.67, "other": 1.33}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 33.64,
@@ -170,6 +186,8 @@ PLAYER_DATA = {
          "cats": {"lit": 0.0, "hist": 3.0, "sci": 0.0, "arts": 0.5, "beliefs": 4.0, "thought": 1.5, "other": 1.0}},
     ],
     "Emerson Patmore": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 24.0,
+         "cats": {"lit": 2.5, "hist": 9.0, "sci": 1.0, "arts": 2.0, "beliefs": 2.5, "thought": 0.5, "other": 4.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 37.5,
          "cats": {"lit": 1.88, "hist": 9.38, "sci": 1.25, "arts": 1.25, "beliefs": 3.44, "thought": 1.88, "other": 2.5}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 29.09,
@@ -184,6 +202,8 @@ PLAYER_DATA = {
          "cats": {"lit": 2.0, "hist": 12.0, "sci": 2.0, "arts": 2.5, "beliefs": 5.0, "thought": 3.0, "other": 5.0}},
     ],
     "Graham Cope": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 24.0,
+         "cats": {"lit": 1.5, "hist": 4.5, "sci": 8.0, "arts": 1.0, "beliefs": 1.0, "thought": 0.3, "other": 3.5}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 27.19,
          "cats": {"lit": 0.63, "hist": 5.63, "sci": 4.06, "arts": 1.25, "beliefs": 1.88, "thought": 2.5, "other": 0.0}},
         {"tournament": "2024 ACF Nationals", "difficulty": 4.0, "ppg": 25.88,
@@ -196,6 +216,8 @@ PLAYER_DATA = {
          "cats": {"lit": 4.0, "hist": 10.0, "sci": 12.0, "arts": 4.0, "beliefs": 4.0, "thought": 3.0, "other": 4.0}},
     ],
     "Matthew Sumanen": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 15.0,
+         "cats": {"lit": 0.5, "hist": 0.5, "sci": 7.5, "arts": -0.3, "beliefs": 0.8, "thought": 3.5, "other": 1.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 23.44,
          "cats": {"lit": 3.13, "hist": 1.25, "sci": 9.06, "arts": 0.0, "beliefs": 1.25, "thought": 0.94, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 28.64,
@@ -212,6 +234,8 @@ PLAYER_DATA = {
          "cats": {"lit": 3.0, "hist": 2.0, "sci": 12.0, "arts": 2.0, "beliefs": 2.5, "thought": 2.0, "other": 2.0}},
     ],
     "Zach Tseng": [
+        {"tournament": "2026 ACF Nationals", "difficulty": 4.0, "ppg": 14.5,
+         "cats": {"lit": 2.0, "hist": 0.0, "sci": 0.3, "arts": 10.0, "beliefs": 0.8, "thought": 0.0, "other": 0.0}},
         {"tournament": "2026 ACF Regionals", "difficulty": 3.0, "ppg": 16.88,
          "cats": {"lit": 1.25, "hist": 0.0, "sci": 1.25, "arts": 9.38, "beliefs": -0.31, "thought": 0.0, "other": 0.0}},
         {"tournament": "2025 ACF Winter", "difficulty": 2.0, "ppg": 30.0,
@@ -280,7 +304,10 @@ CATEGORY_LABELS = {
 
 
 def compute_weighted_category_ppg(player_name, min_difficulty=0.0):
-    """Compute difficulty-weighted average category PPG for a player."""
+    """Compute difficulty-weighted average category PPG for a player.
+    Uses QUADRATIC weighting: weight = difficulty^2
+    This heavily emphasizes high-difficulty tournaments (nationals=16x, regs=9x, winter=4x, fall=1x).
+    """
     data = PLAYER_DATA.get(player_name, [])
     if not data:
         return {cat: 0.0 for cat in CATEGORY_LABELS}
@@ -291,10 +318,13 @@ def compute_weighted_category_ppg(player_name, min_difficulty=0.0):
     for entry in data:
         if entry["difficulty"] < min_difficulty:
             continue
-        # Weight higher difficulty tournaments more AND weight recent (25-26) more
-        weight = entry["difficulty"]
+        if entry["ppg"] == 0 and all(v == 0 for v in entry["cats"].values()):
+            continue  # skip empty entries
+        # QUADRATIC weighting: difficulty^2
+        weight = entry["difficulty"] ** 2
+        # Recency boost for 25-26 season
         if entry.get("tournament", "").startswith("2025") or entry.get("tournament", "").startswith("2026"):
-            weight *= 1.2  # slight recency boost
+            weight *= 1.3
         for cat in CATEGORY_LABELS:
             weighted_cats[cat] += entry["cats"].get(cat, 0) * weight
         total_weight += weight
@@ -359,9 +389,9 @@ def predict_buzz(question_category, question_subcategory=""):
 # ============================================================
 
 st.title("GT Quizbowl - ACF Nationals Team Optimizer")
-st.markdown("*Data from 2024-2026 season tournaments (pre-2026 Nationals)*")
+st.markdown("*Data: 2022-2026 seasons | Weighting: quadratic (difficulty\u00b2) | Includes 2026 ACF Nationals*")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Player Profiles", "Team Optimizer", "Compare Teams", "Who Gets It?"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Player Profiles", "Team Optimizer", "Compare Teams", "Who Gets It?", "Add Stats"])
 
 # --- TAB 1: Player Profiles ---
 with tab1:
@@ -612,3 +642,79 @@ with tab4:
                 color="Cat PPG", color_continuous_scale="Viridis"
             )
             st.plotly_chart(fig_who, use_container_width=True)
+
+
+# --- TAB 5: Add Stats ---
+with tab5:
+    st.header("Paste New Stats")
+    st.markdown("""
+    Paste buzzpoints data from a tournament page to add new stats for a player.
+    Format the data as category lines like:
+    ```
+    Literature - American: 5 buzzes, 3 correct, 2 incorrect
+    Science - Physics: 10 buzzes, 7 correct, 1 incorrect
+    ```
+    Or paste raw text from a buzzpoints page and it will be parsed.
+    """)
+
+    paste_player = st.selectbox("Player", list(PLAYER_DATA.keys()), key="paste_player")
+    paste_tournament = st.text_input("Tournament name", placeholder="e.g., 2026 ACF Nationals")
+    paste_difficulty = st.select_slider(
+        "Tournament difficulty",
+        options=[1.0, 1.5, 2.0, 2.5, 3.0, 4.0],
+        value=3.0,
+        key="paste_diff",
+        format_func=lambda x: f"{x} dot"
+    )
+    paste_games = st.number_input("Games played", min_value=1, max_value=30, value=18)
+    paste_data = st.text_area("Paste buzzpoints data here", height=300,
+                              placeholder="Paste from buzzpoints page...")
+
+    if st.button("Parse & Preview"):
+        if paste_data.strip():
+            # Parse the pasted data
+            import re
+            lines = paste_data.strip().split('\n')
+            parsed_cats = {"lit": 0, "hist": 0, "sci": 0, "arts": 0, "beliefs": 0, "thought": 0, "other": 0}
+
+            cat_mapping = {
+                "literature": "lit", "lit": "lit",
+                "history": "hist", "hist": "hist",
+                "science": "sci", "sci": "sci", "physics": "sci", "chemistry": "sci", "biology": "sci",
+                "fine arts": "arts", "arts": "arts", "painting": "arts", "classical music": "arts", "sculpture": "arts",
+                "religion": "beliefs", "mythology": "beliefs",
+                "philosophy": "thought",
+                "social science": "other", "geography": "other", "current events": "other", "other": "other",
+            }
+
+            total_points = 0
+            for line in lines:
+                line_lower = line.lower().strip()
+                if not line_lower:
+                    continue
+                # Try to extract category and buzz count
+                for cat_name, cat_key in cat_mapping.items():
+                    if cat_name in line_lower:
+                        # Extract numbers
+                        numbers = re.findall(r'\d+', line)
+                        if numbers:
+                            buzzes = int(numbers[0])
+                            correct = int(numbers[1]) if len(numbers) > 1 else buzzes
+                            incorrect = int(numbers[2]) if len(numbers) > 2 else 0
+                            points = correct * 10 - incorrect * 5
+                            parsed_cats[cat_key] += points / paste_games
+                            total_points += points
+                        break
+
+            st.subheader("Parsed Category PPG")
+            parsed_df = pd.DataFrame([{
+                "Category": CATEGORY_LABELS[k],
+                "PPG": round(v, 2)
+            } for k, v in parsed_cats.items()])
+            st.dataframe(parsed_df, use_container_width=True, hide_index=True)
+            st.metric("Total PPG", f"{total_points/paste_games:.1f}")
+
+            st.subheader("Entry to add (copy this into PLAYER_DATA)")
+            entry_str = f'{{"tournament": "{paste_tournament}", "difficulty": {paste_difficulty}, "ppg": {total_points/paste_games:.1f},\n'
+            entry_str += f' "cats": {{"lit": {parsed_cats["lit"]:.2f}, "hist": {parsed_cats["hist"]:.2f}, "sci": {parsed_cats["sci"]:.2f}, "arts": {parsed_cats["arts"]:.2f}, "beliefs": {parsed_cats["beliefs"]:.2f}, "thought": {parsed_cats["thought"]:.2f}, "other": {parsed_cats["other"]:.2f}}}}}'
+            st.code(entry_str, language="python")
