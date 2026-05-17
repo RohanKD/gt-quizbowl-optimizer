@@ -311,6 +311,71 @@ CATEGORY_LABELS = {
     "other": "Social Sci/Geo",
 }
 
+# Subcategory specialization multipliers per player
+# Values > 1.0 = specialist, < 1.0 = weak in that subcat relative to their category avg
+# Only need to list deviations from 1.0 (default)
+PLAYER_SUBCATS = {
+    "Kevin Wang": {
+        "American Lit": 1.4, "British Lit": 1.3, "European Lit": 1.2, "Poetry": 1.1,
+        "Drama": 1.0, "World Lit": 0.8,
+    },
+    "Rohan Dalal": {
+        "Physics": 1.4, "Chemistry": 1.2, "Biology": 0.7, "Math": 1.1,
+        "Earth Science": 0.8, "Astronomy": 1.0, "Computer Science": 1.3,
+    },
+    "Arunn Sankar": {
+        "Biology": 1.4, "Chemistry": 1.2, "Physics": 0.8,
+        "European History": 1.2, "American History": 0.9, "Ancient History": 1.1,
+    },
+    "Tianyu Xu": {
+        "Physics": 1.3, "Chemistry": 1.2, "Biology": 0.9,
+        "Classical Music": 1.3, "Painting": 1.1,
+        "American History": 1.0, "European History": 1.1,
+    },
+    "Alex Thomas": {
+        "Painting": 1.3, "Classical Music": 1.2, "Film": 1.1,
+        "American Lit": 1.2, "British Lit": 1.1,
+        "Physics": 1.0, "Biology": 1.0,
+    },
+    "Jeffrey Xu": {
+        "Painting": 1.4, "Classical Music": 1.3, "Sculpture": 1.2, "Architecture": 1.1,
+        "Christianity": 1.2, "Islam": 1.1,
+    },
+    "Pranav Jothi": {
+        "American Lit": 1.4, "British Lit": 1.3, "European Lit": 1.2, "Poetry": 1.2,
+        "Drama": 1.1, "World Lit": 1.0,
+    },
+    "Emerson Patmore": {
+        "European History": 1.3, "American History": 1.2, "Ancient History": 1.1, "World History": 1.0,
+        "Christianity": 1.2, "Greek Myth": 1.1,
+        "Geography": 1.2, "Economics": 1.1,
+    },
+    "Graham Cope": {
+        "Physics": 1.3, "Chemistry": 1.1, "Biology": 0.9,
+        "European History": 1.2, "American History": 1.1,
+        "Geography": 1.2,
+    },
+    "Arhith Dharanendra": {
+        "Christianity": 1.3, "Islam": 1.3, "Hinduism": 1.4, "Buddhism": 1.2,
+        "Greek Myth": 1.1, "Norse Myth": 1.0,
+        "Ancient Phil": 1.2, "Modern Phil": 1.1, "Ethics": 1.2,
+        "Geography": 1.2, "Political Science": 1.1,
+    },
+    "Matthew Sumanen": {
+        "American History": 1.3, "European History": 1.1, "Ancient History": 1.2,
+        "Biology": 1.2, "Chemistry": 1.0, "Physics": 0.8,
+    },
+    "Zach Tseng": {
+        "Biology": 1.3, "Chemistry": 1.1, "Physics": 0.9,
+        "Classical Music": 1.2, "Jazz/Pop": 1.1,
+    },
+    "Samir Sarma": {
+        "Physics": 1.3, "Chemistry": 1.2, "Biology": 1.0,
+        "European History": 1.2, "American History": 1.1,
+        "Painting": 1.1, "Classical Music": 1.0,
+    },
+}
+
 
 def get_player_avg_rank(player_name, min_difficulty=0.0):
     """Compute difficulty-weighted average buzz rank for a player.
@@ -783,32 +848,43 @@ with tab4:
             break
 
     if cat_key:
+        # Determine active subcategory for specialization scoring
+        active_sub = detected_sub if (detected_cat == cat_key and detected_sub) else ""
+
         pool = team_filter if team_filter else [p for p in PLAYER_DATA if PLAYER_DATA[p]]
         results = []
         for player in pool:
             cat_ppg = compute_weighted_category_ppg(player, min_difficulty=2.0)
             ppg_in_cat = cat_ppg.get(cat_key, 0)
             sf = compute_speed_factor(player, min_difficulty=2.0)
+            # Apply subcategory specialization multiplier
+            subcat_mult = 1.0
+            if active_sub and player in PLAYER_SUBCATS:
+                subcat_mult = PLAYER_SUBCATS[player].get(active_sub, 1.0)
             tossups_per_round = NATS_DISTRIBUTION.get(cat_key, 1)
             max_possible = tossups_per_round * 15
-            adj_ppg = ppg_in_cat * sf
+            adj_ppg = ppg_in_cat * sf * subcat_mult
             prob = min(max(adj_ppg / max_possible, 0), 1.0) if max_possible > 0 else 0
-            results.append({
+            row = {
                 "Player": player,
                 "Cat PPG": round(ppg_in_cat, 2),
                 "Speed": f"{sf:.2f}x",
-                "Adj PPG": round(adj_ppg, 2),
-                "Buzz Prob": f"{prob*100:.0f}%",
-            })
+            }
+            if active_sub:
+                row["Subcat"] = f"{subcat_mult:.1f}x"
+            row["Adj PPG"] = round(adj_ppg, 2)
+            row["Buzz Prob"] = f"{prob*100:.0f}%"
+            results.append(row)
 
         results.sort(key=lambda x: x["Adj PPG"], reverse=True)
         results_df = pd.DataFrame(results)
         st.dataframe(results_df, use_container_width=True, hide_index=True)
 
         # Bar chart
+        title_suffix = f" ({active_sub})" if active_sub else ""
         fig_who = px.bar(
             results_df, x="Player", y="Adj PPG",
-            title=f"Who buzzes on {selected_cat_label}?{' (' + detected_sub + ')' if detected_sub and selected_cat_label == CATEGORY_LABELS.get(detected_cat) else ''}",
+            title=f"Who buzzes on {selected_cat_label}?{title_suffix}",
             color="Adj PPG", color_continuous_scale="Viridis"
         )
         st.plotly_chart(fig_who, use_container_width=True)
