@@ -433,11 +433,7 @@ with tab1:
     st.plotly_chart(fig, use_container_width=True)
 
     # Table
-    st.dataframe(
-        df.style.background_gradient(subset=cat_cols, cmap="YlOrRd", axis=0),
-        use_container_width=True,
-        hide_index=True,
-    )
+    st.dataframe(df, use_container_width=True, hide_index=True)
 
     # Individual player drill-down
     st.subheader("Individual Player Detail")
